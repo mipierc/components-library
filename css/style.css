@@ -134,26 +134,23 @@ body {
 #nav2 #img img{
   background-color: white;
   width:67px;
-  -webkit-box-shadow:2px 2px 2px #000;
   float:left;
 }
 #nav2 ul{
-    background-color:#000;
+    background-color: grey;
 }
 #nav2 ul li {
-  display: inline;
+  display: flex;
+	justify-content: space-around;
   margin:2px;
 }
-#nav2 ul li head2{
+#nav2 ul li2 head2{
  text-decoration: overline;
-  color:white;
+  color: #000;
 }
-#nav2 ul li head2:hover{
- float:right;
-
-}
-#nav2 ul li:hover
+#nav2 li:hover
 {
+	color: white;
   background-color:#62625B;
 
 }
@@ -431,4 +428,296 @@ body {
 	               0 5px 10px rgba(0,0,0,.2),
 	              0 10px 10px rgba(0,0,0,.2),
 	              0 20px 20px rgba(0,0,0,.3);
+}
+
+/* ### MEDIA CARD 1 ### */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  letter-spacing: 0;
+}
+
+.scroll {
+  overflow: scroll !important;
+}
+
+.item {
+  width: 400px;
+  height: 500px;
+  background: #fff;
+  position: relative;
+  box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.item .img {
+  width: 100%;
+  height: 50%;
+  background: black;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+}
+.item .img-content {
+  width: 100%;
+  height: 100%;
+  transition: 0 !important;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/26th_Tokyo_International_Film_Festival-_Tom_Hanks_from_Captain_Phillips_%2814970103713%29.jpg/640px-26th_Tokyo_International_Film_Festival-_Tom_Hanks_from_Captain_Phillips_%2814970103713%29.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.item.showfull .text-container {
+  height: 90%;
+}
+.item.showfull .content {
+  height: 78%;
+}
+.item.showfull .social {
+  top: 25px;
+}
+.item.showfull .img-content {
+  transform: scale(1.04);
+  filter: blur(5px);
+}
+.item.showfull .like {
+  margin-top: 100px;
+}
+.item .text-container {
+  width: 100%;
+  height: 55%;
+  background: #fff;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  box-shadow: -3px -10px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding: 30px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.item .content {
+  height: 63%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.item .social {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 15;
+  top: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.item h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.item .social div {
+  width: 50px;
+  height: 50px;
+  background: green;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.item .social div:hover {
+  transform: scale(1.1);
+}
+.item .social a:last-child {
+  margin-right: 20px;
+}
+.item a .tw {
+  background-color: #0084b4;
+}
+.item a .fb {
+  background-color: #3b5998;
+}
+.item a .ig {
+  background-color: #cd486b;
+}
+.item .like {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #a37f7f;
+  border-radius: 50%;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.item .like:hover {
+  transform: scale(1.1);
+}
+.item .like i {
+  font-size: 15px;
+}
+.item .like.clicked {
+  background: #ffcece;
+}
+.item .like.clicked i {
+  color: #e60026;
+}
+.item .readmore {
+  display: flex;
+  padding-bottom: 5px;
+}
+.item .readmore h3 {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 40px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+/* ### MEDIA CARD 2 ### */
+.info-card-container {
+  width: 100%;
+  min-height: 100%;
+  height: 83rem;
+  overflow: hidden;
+  background: linear-gradient(to right, #0C1B23 0%, #0C1B23 70%, #fff 70%, #fff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$white", endColorstr="$white",GradientType=1 );
+  /* IE6-9 */
+  position: relative;
+}
+
+.info-card {
+  min-width: 80%;
+  max-width: 90rem;
+  min-height: 70%;
+  height: 70rem;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0.01rem 0.01rem 1rem #0C1B23;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.info-card__content {
+  float: left;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card__image-exposure {
+  width: 45%;
+}
+
+.info-card__bio {
+  width: 40%;
+  padding: 5rem;
+  height: auto;
+  font-family: "Domine", serif;
+}
+.info-card__bio--title {
+  color: #141D1D;
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+.info-card__bio--copy {
+  color: #9da09f;
+  line-height: 2;
+}
+
+.info-card__image-exposure__item {
+  background-image: url("https://data.mothership.tools/mothershiptools-ukprod/wp-content/uploads/2017/10/johnlegend-bw-420x420.jpg");
+  background-color: #fff;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  opacity: 0.9;
+}
+
+.info-card__image-exposure--blend {
+  background-image: url("https://images.unsplash.com/photo-1478558284440-e15abf10c81d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80");
+  background-repeat: no-repeat;
+  background-color: #fff;
+  mix-blend-mode: soft-light;
+  background-position: -5rem;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  -webkit-animation: blendAnimate 30s linear infinite;
+          animation: blendAnimate 30s linear infinite;
+}
+
+.close {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #000;
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.close:before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-90deg);
+}
+
+@-webkit-keyframes blendAnimate {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes blendAnimate {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0;
+  }
 }
